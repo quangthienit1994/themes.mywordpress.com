@@ -1,0 +1,44 @@
+2018-10-18T07:29:16+00:00 CRITICAL Uncaught Error: Call to undefined function get_the_field() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\page.php:3
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#3 {main}
+  thrown
+
+2018-10-18T08:01:48+00:00 CRITICAL Uncaught Error: Call to undefined function get_categories_products_fillter() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\woocommerce\product-filterform.php:216
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\search.php(20): require_once()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#4 {main}
+  thrown
+
+2018-10-18T08:27:54+00:00 CRITICAL Uncaught Error: Call to undefined function wc_get_attribute_values() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\woocommerce\product-filterform.php:182
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\search.php(20): require_once()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#4 {main}
+  thrown
+
+2018-10-18T08:42:05+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Term as array in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\plugins\polylang\include\query.php:60
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\plugins\polylang\include\query.php(65): PLL_Query->have_translated_taxonomy(Array)
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\plugins\polylang\include\query.php(65): PLL_Query->have_translated_taxonomy(Array)
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\plugins\polylang\include\query.php(168): PLL_Query->have_translated_taxonomy(Array)
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\plugins\polylang\frontend\frontend.php(127): PLL_Query->filter_query(Object(PLL_Language))
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\class-wp-hook.php(286): PLL_Frontend->parse_query(Object(WP_Query))
+#5 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\class-wp-hook
+
+2018-10-18T08:48:22+00:00 CRITICAL Uncaught Error: Call to undefined function pll_get_lag() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\woocommerce\product-filterform.php:203
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\search.php(20): require_once()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#4 {main}
+  thrown
+
