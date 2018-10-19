@@ -1,4 +1,16 @@
 <?php get_header(); 
+function show_only_products_with_qtdy_min_1( $meta_query, $query ) {
+	if( is_admin() ) return $meta_query;
+
+	    // Add your criteria
+	$meta_query[] = array(
+       'key'     => '_stock',
+	    'type'    => 'numeric',
+	    'value'   => 0,
+		'compare' => '>'
+	);
+	return $meta_query;
+};
 ?>
 <div id="primary" class="content-area">
 	<main >
@@ -21,50 +33,35 @@
 							require_once('woocommerce/product-filterform.php');
 						?>
 						<?php
-						if ( woocommerce_product_loop() ) {
+						var_dump($_GET);
+						$orderby = vinacen_get_value('orderby', 'popularity');
+						$limit = vinacen_get_value('posts', get_option( 'posts_per_page', 10 ));
+						$cats = vinacen_get_value('checkproduct_cat');
+						$on_sale = vinacen_get_value('on_sale');
+						$in_stock = vinacen_get_value('in_stock');
 
-							/**
-							 * Hook: woocommerce_before_shop_loop.
-							 *
-							 * @hooked wc_print_notices - 10
-							 * @hooked woocommerce_result_count - 20
-							 * @hooked woocommerce_catalog_ordering - 30
-							 */
-							do_action( 'woocommerce_before_shop_loop' );
-
-							woocommerce_product_loop_start();
-
-							if ( wc_get_loop_prop( 'total' ) ) {
-								while ( have_posts() ) {
-									the_post();
-
-									/**
-									 * Hook: woocommerce_shop_loop.
-									 *
-									 * @hooked WC_Structured_Data::generate_product_data() - 10
-									 */
-									do_action( 'woocommerce_shop_loop' );
-
-									wc_get_template_part( 'content', 'product' );
-								}
+						if(is_array($cats)){
+							$category_names = array();
+							foreach ($cats as $k => $v)
+							{
+							    $category_names[] = $v;
 							}
-
-							woocommerce_product_loop_end();
-
-							/**
-							 * Hook: woocommerce_after_shop_loop.
-							 *
-							 * @hooked woocommerce_pagination - 10
-							 */
-							do_action( 'woocommerce_after_shop_loop' );
-						} else {
-							/**
-							 * Hook: woocommerce_no_products_found.
-							 *
-							 * @hooked wc_no_products_found - 10
-							 */
-							do_action( 'woocommerce_no_products_found' );
+							$cats = implode(', ', $category_names);
 						}
+
+						if($in_stock){
+							add_filter( 'woocommerce_product_query_meta_query', 'show_only_products_with_qtdy_min_1', 10, 2 );
+						}
+						
+
+						echo do_shortcode('[products 	
+							paginate="true" 
+							columns="4" 
+							orderby="'.$orderby.'" 
+							category="'.$cats.'"
+							limit="'.$limit.'"
+							'.($on_sale ? 'on_sale="true"' : '').'
+							 ]');
 						?>
 					</div>
 					<div class="col-md-3 col-md-pull-9 ct-js-sidebar"><?php get_sidebar( 'products' ); ?></div>

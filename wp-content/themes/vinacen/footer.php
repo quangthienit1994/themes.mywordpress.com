@@ -1,3 +1,4 @@
+<?php require_once(get_template_directory().'/components/parallax.php'); ?>
 <footer>
 	<!--main footer!-->
 	<div class="ct-preFooter ct-u-backgroundGray ct-u-paddingTop70 ct-u-paddingBottom15">

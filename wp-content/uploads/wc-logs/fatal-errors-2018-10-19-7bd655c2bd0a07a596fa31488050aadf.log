@@ -1,0 +1,84 @@
+2018-10-19T02:26:06+00:00 CRITICAL Uncaught Error: Call to undefined function get_post_metas() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\funcs\options.php:7
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\functions.php(178): require()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-settings.php(426): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-config.php(89): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-load.php(37): require_once('C:\\Program File...')
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(13): require_once('C:\\Program File...')
+#5 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#6 {main}
+  thrown
+
+2018-10-19T02:26:40+00:00 CRITICAL Uncaught Error: Call to undefined function get_post_metas() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\funcs\options.php:7
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\functions.php(178): require()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-settings.php(426): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-config.php(89): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-load.php(37): require_once('C:\\Program File...')
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-admin\admin-ajax.php(22): require_once('C:\\Program File...')
+#5 {main}
+  thrown
+
+2018-10-19T02:27:02+00:00 CRITICAL Uncaught Error: Call to undefined function get_post_metas() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\funcs\options.php:7
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\functions.php(178): require()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-settings.php(426): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-config.php(89): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-load.php(37): require_once('C:\\Program File...')
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-admin\admin-ajax.php(22): require_once('C:\\Program File...')
+#5 {main}
+  thrown
+
+2018-10-19T02:30:10+00:00 CRITICAL Uncaught Error: Call to undefined function add_submenu_page() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\funcs\options.php:12
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\functions.php(178): require()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-settings.php(426): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-config.php(89): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-load.php(37): require_once('C:\\Program File...')
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-admin\admin-ajax.php(22): require_once('C:\\Program File...')
+#5 {main}
+  thrown
+
+2018-10-19T02:30:11+00:00 CRITICAL Uncaught Error: Call to undefined function add_submenu_page() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\funcs\options.php:12
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\functions.php(178): require()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-settings.php(426): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-config.php(89): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-load.php(37): require_once('C:\\Program File...')
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-admin\admin.php(31): require_once('C:\\Program File...')
+#5 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-admin\post.php(12): require_once('C:\\Program File...')
+#6 {main}
+  thrown
+
+2018-10-19T02:30:11+00:00 CRITICAL Uncaught Error: Call to undefined function add_submenu_page() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\funcs\options.php:12
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\functions.php(178): require()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-settings.php(426): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-config.php(89): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-load.php(37): require_once('C:\\Program File...')
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-admin\admin-ajax.php(22): require_once('C:\\Program File...')
+#5 {main}
+  thrown
+
+2018-10-19T02:30:32+00:00 CRITICAL Uncaught Error: Call to undefined function add_submenu_page() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\funcs\options.php:12
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\functions.php(178): require()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-settings.php(426): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-config.php(89): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-load.php(37): require_once('C:\\Program File...')
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-admin\admin.php(31): require_once('C:\\Program File...')
+#5 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-admin\post.php(12): require_once('C:\\Program File...')
+#6 {main}
+  thrown
+
+2018-10-19T03:54:54+00:00 CRITICAL Uncaught Error: Call to undefined function get_value() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\woocommerce\product-filterform.php:205
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\search.php(21): require_once()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#4 {main}
+  thrown
+
+2018-10-19T07:37:53+00:00 CRITICAL Maximum execution time of 30 seconds exceeded
+

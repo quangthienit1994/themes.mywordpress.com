@@ -166,11 +166,15 @@ if(!function_exists('vinacen_enqueue_scripts')){
 		wp_enqueue_style( 'style-2', get_template_directory_uri().'/assets/css/style2.css', '1.0' );
 		wp_enqueue_style( 'style-3', get_template_directory_uri().'/assets/css/style3.css', '1.0' );
 		wp_enqueue_style( 'style-4', get_template_directory_uri().'/assets/css/style4.css', '1.0' );
+		
+		wp_enqueue_style( 'vinacen', get_template_directory_uri().'/assets/css/vinacen.css', '1.0' );
 
 		wp_enqueue_script('form-filter', get_template_directory_uri().'/assets/js/filter.js', array('jquery'), '1.0', true);
+		wp_enqueue_script('vinacen-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '1.0', true);
 	}
 	add_action('wp_enqueue_scripts', 'vinacen_enqueue_scripts');
 }
 
 require(get_template_directory().'/funcs/funcs.php');
 require(get_template_directory().'/funcs/string_languages.php');
+require(get_template_directory().'/funcs/options.php');

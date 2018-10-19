@@ -1,3 +1,17 @@
+<?php 
+	$oders = array(
+		"menu" => "Default",
+		"popularity" => "Popularity",
+		"rating" => "Average rating",
+		"date" => "Newnest",
+		"price" => "Price: low to high",
+		"price-desc" => "Price: high to low",
+		"rand" => "Random products",
+	);
+	$orderBy = isset($_GET['orderby']) ? $_GET['orderby'] : 'menu';
+	$posts_limit = isset($_GET['posts']) ? $_GET['posts'] : 20;
+	$posts_per_pages = array(40, 36, 32, 28, 24, 20, 16, 12, 8 ,4);
+?>
 <div class="ct-inner">
 	<form name="Form_one" id="ct-wooSearch-form1" method="GET" role="search" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<div class="ct-wooSearch" id="content123">
@@ -7,13 +21,13 @@
 						<span class="ct-sortBy-text"><?php pll_e('Sort by'); ?></span>
 						<div class="ct-select-Wrapper">
 							<select class="ct-select  select2-hidden-accessible" name="orderby">
-								<option value="menu-order" selected="selected"><?php pll_e('Default'); ?></option>
-								<option value="popularity"><?php pll_e('Popularity'); ?></option>
-								<option value="rating"><?php pll_e('Average rating'); ?></option>
-								<option value="date"><?php pll_e('Newness'); ?></option>
-								<option value="price"><?php pll_e('Price: low to high'); ?></option>
-								<option value="price-desc"><?php pll_e('Price: high to low'); ?></option>
-								<option value="rand"><?php pll_e('Random products'); ?></option>
+								<?php 
+								foreach ($oders as $key => $value) {
+									?>
+										<option value="<?php echo $key; ?>" <?php echo $orderBy === $key ? 'selected="selected"' : '' ?>><?php pll_e($value); ?></option>
+									<?php
+								}
+								?>
 							</select>
 						</div>
 					</li>
@@ -23,16 +37,14 @@
 						<span><?php pll_e('Show'); ?></span>
 						<div class="ct-select-Wrapper">
 							<select class="ct-select  select2-hidden-accessible" name="posts">
-								<option value="40"> 40</option>
-								<option value="36"> 36</option>
-								<option value="32"> 32</option>
-								<option value="28"> 28</option>
-								<option value="24"> 24</option>
-								<option value="20" selected=""> 20</option>
-								<option value="16"> 16</option>
-								<option value="12"> 12</option>
-								<option value="8"> &nbsp;8</option>
-								<option value="4"> &nbsp;4</option>
+								<?php 
+								for($i = 0; $i < count($posts_per_pages); $i++){
+									$value = $posts_per_pages[$i];
+									?>
+										<option value="<?php echo $value; ?>" <?php echo (int)$posts_limit === (int)$value ? 'selected="selected"' : '' ?>><?php pll_e($value); ?></option>
+									<?php
+								}
+								?>
 							</select>
 						</div>
 						<span><?php pll_e('Per page'); ?></span>
@@ -42,56 +54,76 @@
 			<!-- Selected filter -->
 			<div class="ct-wooSearch-filterSelect">
 				<button type="button" id="ct-wooSearch-filterIcon">
-				<img class="ct-wooSearch-loader" src="http://farmfresh.themeplayers.net/wp-content/plugins/ct-woofiltering/assets/img/loader.gif" alt="icon">
-				<img class="ct-wooSearch-icon" src="http://farmfresh.themeplayers.net/wp-content/plugins/ct-woofiltering/assets/img/slider-icon.png" alt="icon">
+				<img class="ct-wooSearch-loader" src="<?php echo get_template_directory_uri(); ?>/assets/images/loader.gif" alt="icon">
+				<img class="ct-wooSearch-icon" src="<?php echo get_template_directory_uri(); ?>/assets/images/slider-icon.png" alt="icon">
 				</button>
 				<div class="ct-wooSearch-filters">
 					<span class="ct-wooSearch-filtersTitle"><?php pll_e('Selected filters'); ?></span>
-					<div class="ct-wooSearch-scrollbar" data-mcs-axis="x" data-mcs-theme="light-3">
-						<ul class="ct-wooSearch-filtersList ct-wooSearch-list" id="filter-list">
-							<li id="filter3">
-								<a
-								href="#" class="removeThis" data-remove="checkproduct_tag[230]">mushrooms</a>
-								<span
-								class="removeThis" data-remove="checkproduct_tag[230]">x</span>
-							</li>
-							
-							<li id="filter3">
-								<a
-								href="#" class="removeThis" data-remove="checkproduct_tag[231]">fresh</a>
-								<span
-								class="removeThis" data-remove="checkproduct_tag[231]">x</span>
-							</li>
-							
-							<li id="filter5">
-								<a href="#" class="removeThis" data-remove="selecproduct_type">simple</a>
-								<span class="removeThis" data-remove="selecproduct_type">x</span>
-							</li>
-							<li id="filter6">
-								<a href="#" class="removeThis" data-remove="selecpa_color">Green</a>
-								<span class="removeThis" data-remove="selecpa_color">x</span>
-							</li>
-							<li id="filter7">
-								<a href="#" class="removeThis" data-remove="range">&pound;5 - &pound;23</a>
-								<span class="removeThis" data-remove="range">x</span>
-							</li>
-							<li id="filter9">
-								<a href="#" class="removeThis" data-remove="on_sale">On sale</a>
-								<span class="removeThis"
-								data-remove="on_sale">x</span>
-							</li>
-							<li id="filter10">
-								<a href="#" class="removeThis" data-remove="in_stock">In stock</a>
-								<span class="removeThis" data-remove="in_stock">x</span>
-							</li>
-						</ul>
-						<span class="ct-wooSearch-filtersClear">
-							<a id="ct-wooSearch-clear"><?php pll_e('Clear all'); ?></a>
-						</span>
-					</div>
-					<span class="ct-wooSearch-noFilters">
-						<?php pll_e('No filters selected'); ?>
-					</span>
+					<?php 
+
+					if(isset($_GET) && !empty($_GET)){
+						?>
+						<div class="ct-wooSearch-scrollbar" data-mcs-axis="x" data-mcs-theme="light-3">
+							<ul class="ct-wooSearch-filtersList ct-wooSearch-list" id="filter-list">
+								<?php 
+								$i = 0;
+								foreach ($_GET as $key => $value) {
+									if(!$value){
+										continue;
+									}
+									if(is_string($value)){
+										$v = $value;
+										switch ($key) {
+											case 'on_sale':
+												$v = "On Sale";
+												break;
+											case 'in_stock':
+												$v = "In Stock";
+												break;
+											case 'orderby':
+											case 'posts':
+											case 'ct_filter':
+											case 'range':
+												continue;
+										}
+									?>
+										<li id="filter<?php echo $i; ?>">
+											<a
+											href="#" class="removeThis" data-remove="<?php echo $key; ?>"><?php echo $v; ?></a>
+											<span
+											class="removeThis" data-remove="<?php echo $key; ?>">x</span>
+										</li>
+									<?php
+									}else{
+										foreach ($value as $k => $v) {
+											?>
+												<li id="filter<?php echo $i; ?>">
+													<a
+													href="#" class="removeThis" data-remove="<?php echo $key; ?>[<?php echo $k ?>]"><?php echo $v; ?></a>
+													<span
+													class="removeThis" data-remove="<?php echo $key; ?>[<?php echo $k ?>]">x</span>
+												</li>
+											<?php
+										}
+									}
+									$i++;
+								}
+								?>
+							</ul>
+							<span class="ct-wooSearch-filtersClear">
+								<a id="ct-wooSearch-clear"><?php pll_e('Clear all'); ?></a>
+							</span>
+						</div>
+						<?php
+					}else{
+						?>
+							<span class="ct-wooSearch-noFilters">
+								<?php pll_e('No filters selected'); ?>
+							</span>
+						<?php
+					}
+
+					?>
 				</div>
 			</div>
 			<!-- Possible options -->
@@ -108,11 +140,20 @@
 										foreach ($tags as $tag) {
 											?>
 											<li class="checkbox " id="li1">
-												<input class="element " type="checkbox" name="checkproduct_tag[]" id="checkbox_product_tag_<?php echo $tag->term_id; ?>" value="<?php echo $tag->term_id; ?>">
+												<input 
+												
+												<?php 
+												$check = isset($_GET['checkproduct_tag']) && isset($_GET['checkproduct_tag'][$tag->term_id]) ? true : false;
+												if($check){
+													echo 'checked';
+												}
+												?>
+
+												class="element " type="checkbox" name="checkproduct_tag[<?php echo $tag->term_id; ?>]" id="checkbox_product_tag_<?php echo $tag->term_id; ?>" value="<?php echo $tag->name; ?>">
 												<label for="checkbox_product_tag_<?php echo $tag->term_id; ?>"><?php echo $tag->name; ?> 
 													<?php
 														$count = vinacen_count_by_query(array(
-													'lang' => pll_current_language(),
+															'lang' => pll_current_language(),
 															'tax_query' => array(
 															        array(
 															            'taxonomy' => 'product_tag',
@@ -133,11 +174,28 @@
 								</div>
 							</div>
 							<div class="ct-wooSearch-filter" id="ct-wooSearch-filter_product_shipping_class">
-								<h4 class="ct-wooSearch-filterTitle">Product shipping classes</h4>
+								<h4 class="ct-wooSearch-filterTitle"><?php pll_e('Product shipping classes'); ?></h4>
 								<div class="ct-wooSearch-filterWrapper ct-wooSearch-selWrapper">
 									<div class="ct-select-Wrapper">
 										<select class="ct-select  " name="selecproduct_shipping_class">
 											<option value=''  selected='selected'><?php pll_e('None'); ?></option>
+											<?php 
+											$array = get_terms(array('taxonomy' => 'product_shipping_class', 'hide_empty' => false));
+											$product_type = vinacen_get_value('selecproduct_shipping_class');
+											foreach ($array as $type) {
+												$count = vinacen_count_by_query( array(
+												'lang' => pll_current_language(),
+												'tax_query' => array(
+												        array(
+												            'taxonomy' => 'product_shipping_class',
+												            'terms' => $type->name,
+            												'field'    => 'slug',
+												        )
+												    ),
+												'post_status' => 'publish', 'post_type' => 'product') );
+												echo '<option '.($product_type === $type->name ? 'selected' : '').' value="'.$type->name.'">'.$type->name.' '.($count ? '('.$count.')' : '').'</option>';
+											}
+											?>
 										</select>
 									</div>
 								</div>
@@ -163,18 +221,19 @@
 											<option value="" selected="selected"><?php pll_e('None'); ?></option>
 											<?php 
 											$array = get_terms(array('taxonomy' => 'product_type', 'hide_empty' => false));
-											foreach ($array as $color) {
+											$product_type = vinacen_get_value('selecproduct_type');
+											foreach ($array as $type) {
 												$count = vinacen_count_by_query( array(
 												'lang' => pll_current_language(),
 												'tax_query' => array(
 												        array(
 												            'taxonomy' => 'product_type',
-												            'terms' => $color->name,
+												            'terms' => $type->name,
             												'field'    => 'slug',
 												        )
 												    ),
 												'post_status' => 'publish', 'post_type' => 'product') );
-												echo '<option value="'.$color->term_id.'">'.$color->name.' '.($count ? '('.$count.')' : '').'</option>';
+												echo '<option '.($product_type === $type->name ? 'selected' : '').' value="'.$type->name.'">'.$type->name.' '.($count ? '('.$count.')' : '').'</option>';
 											}
 											?>
 										</select>
@@ -189,10 +248,11 @@
 											<option value="" selected="selected"><?php pll_e('None'); ?></option>
 											<?php 
 											$array = get_terms(array('taxonomy' => 'pa_color', 'hide_empty' => false));
+											$color_value = vinacen_get_value('selecpa_color');
 											foreach ($array as $color) {
 												$count = vinacen_count_by_query( array(
 													'lang' => pll_current_language(),
-												'tax_query' => array(
+													'tax_query' => array(
 												        array(
 												            'taxonomy' => 'pa_color',
 												            'field'           => 'slug',
@@ -200,8 +260,8 @@
 												            'operator' => 'IN',
 												        )
 												    ),
-												 'post_status' => 'publish', 'post_type' => 'product') );
-												echo '<option value="'.$color->term_id.'">'.$color->name.' '.($count ? '('.$count.')' : '').'</option>';
+												 	'post_status' => 'publish', 'post_type' => 'product') );
+												echo '<option '.($color_value === $color->name ? 'selected' : '').' value="'.$color->name.'">'.$color->name.' '.($count ? '('.$count.')' : '').'</option>';
 											}
 											?>
 										</select>
@@ -223,7 +283,7 @@
 									data-grid="false"
 									data-step="0"
 									data-grid-snap="false"
-									value="" name="range" />
+									value="<?php echo vinacen_get_value('range'); ?>" name="range" />
 								</div>
 							</div>
 						</div>
@@ -235,11 +295,11 @@
 							</div>
 							<input id="ct-isFiltering" type="hidden" name="ct_filter" value="true">
 							<div class="ct-wooSearch-footerFilters ct-wooSearch-onSale">
-								<input type="checkbox" id="1" style="display:inline-block!important" name="on_sale" class="">
+								<input <?php echo vinacen_get_value('on_sale') === 'on' ? 'checked' : ''; ?> type="checkbox" id="1" style="display:inline-block!important" name="on_sale" class="">
 								<label for="1"><?php pll_e('Show only products on sale'); ?></label>
 							</div>
 							<div class="ct-wooSearch-footerFilters ct-wooSearch-inStock">
-								<input type="checkbox" id="2" style="display:inline-block!important" name="in_stock" clas="">
+								<input <?php echo vinacen_get_value('in_stock') === 'on' ? 'checked' : ''; ?> type="checkbox" id="2" style="display:inline-block!important" name="in_stock" clas="">
 								<label for="2"><?php pll_e('Show only products in stock'); ?></label>
 							</div>
 						</div>
@@ -253,3 +313,4 @@
 		</div>
 	</form>
 </div>
+<?php wp_reset_query(); ?>
