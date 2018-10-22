@@ -1,7 +1,7 @@
-<?php 
+<?php
 /**
 template name: banner top
- */
+*/
 get_header(); ?>
 <div id="primary" class="content-area">
 	<main >
@@ -21,6 +21,20 @@ get_header(); ?>
 		</div>
 		<section class="ct-shopSection ct-u-paddingBoth100 ct-u-diagonalTopLeft ct-u-diagonalBottomRight">
 			<div class="container">
+				<?php 
+				$label = get_field('label_below_baner');
+				if($label){
+					?>
+					<h3 class="ct-headline text-center ct-u-marginBottom50">
+						<span class="ct-headline-container ct-u-colorMotive">
+							<span class="ct-headline-line ct-headline-line--left"></span>
+							<?php echo $label; ?>
+							<span class="ct-headline-line ct-headline-line--right"></span>
+						</span>
+					</h3>
+					<?php
+				}
+				?>
 				<?php
 					the_content();
 				?>

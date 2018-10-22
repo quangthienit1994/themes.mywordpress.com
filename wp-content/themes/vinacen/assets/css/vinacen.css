@@ -15,7 +15,7 @@
 #widget-footer a:hover{
 	color: #9cdf3c;
 }
-#widget-footer a::before{
+#widget-footer a::before, .input-radio:checked ~ label:before{
 	content: "\f178";
 	font-family: 'fontawesome';
 	color: #9cdf3c;
@@ -73,4 +73,13 @@
 }
 .woocommerce-order-details__title{
 	font-size: 2rem;
+}
+.woocommerce-checkout .woocommerce-form__input#terms, #ship-to-different-address-checkbox{
+	display: inline-block;
+	visibility: visible;
+	margin: 0 0 0 -20px;
+	position: relative;
+}
+.w-100 {
+	width: 100% !important;
 }

@@ -22,5 +22,6 @@ function register_strings(){
 	pll_register_string('Giá: tăng đến giảm', 'vinacen');
 	pll_register_string('Ngẫu nhiên','Random products', 'vinacen');
 	pll_register_string('Sắp','by', 'vinacen');
+	pll_register_string('Nhóm tuyệt vời của chúng tôi','Our Great Team', 'vinacen');
 }
 add_action('init','register_strings');

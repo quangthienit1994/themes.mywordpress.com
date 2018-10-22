@@ -1,4 +1,32 @@
 <?php require_once(get_template_directory().'/components/parallax.php'); ?>
+<section class="container">
+	<h3 class="ct-headline text-center ct-u-marginBottom50">
+	<span class="ct-headline-container ct-u-colorMotive">
+		<span class="ct-headline-line ct-headline-line--left"></span>
+		<?php pll_e('our notice board    '); ?>
+		<span class="ct-headline-line ct-headline-line--right"></span>
+	</span>
+	</h3>
+</section>
+<div class="container">
+	<?php do_action('our-notice-board'); ?>
+</div>
+<div class="ct-u-borderTop">
+	<section class="container ct-u-marginBoth50">
+		<h3 class="ct-headline text-left">
+		<span class="ct-headline-container ct-u-colorMotive">
+			<span class="ct-headline-line ct-headline-line--left"></span>
+			<?php pll_e('Our brands'); ?>
+			<span class="ct-headline-line ct-headline-line--right"></span>
+		</span>
+		</h3>
+	</section>
+</div>
+<section class="ct-u-paddingBottom50">
+	<div class="container">
+		<?php do_action('show-brands-slide'); ?>
+	</div>
+</section>
 <footer>
 	<!--main footer!-->
 	<div class="ct-preFooter ct-u-backgroundGray ct-u-paddingTop70 ct-u-paddingBottom15">

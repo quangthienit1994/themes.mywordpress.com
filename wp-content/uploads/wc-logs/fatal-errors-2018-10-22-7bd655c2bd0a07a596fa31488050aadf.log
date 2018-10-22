@@ -1,0 +1,44 @@
+2018-10-22T03:30:56+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_field(), 0 passed in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\single-members.php on line 18 and at least 1 expected in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\plugins\advanced-custom-fields-pro\api\api-template.php:51
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\single-members.php(18): get_field()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#4 {main}
+  thrown
+
+2018-10-22T03:31:08+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function get_field(), 0 passed in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\single-members.php on line 18 and at least 1 expected in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\plugins\advanced-custom-fields-pro\api\api-template.php:51
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\single-members.php(18): get_field()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#4 {main}
+  thrown
+
+2018-10-22T04:57:50+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on array in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\components\our-notice-board.php:14
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\class-wp-hook.php(286): vinacen_out_notice_board_slide('')
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\plugin.php(453): WP_Hook->do_action(Array)
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\footer.php(12): do_action('our-notice-boar...')
+#4 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template.php(688): require_once('C:\\Program File...')
+#5 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template.php(647): load_template('C:\\Program File...', true)
+#6 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-
+
+2018-10-22T07:17:45+00:00 CRITICAL Uncaught Error: Call to undefined function the_comments() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\single.php:122
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#3 {main}
+  thrown
+
+2018-10-22T07:33:54+00:00 CRITICAL Uncaught Error: Call to undefined function get_the_field() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\page\banner_top.php:25
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#3 {main}
+  thrown
+

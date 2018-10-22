@@ -66,8 +66,8 @@ function vinacen_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Content Bottom 2', 'vinacen' ),
-		'id'            => 'sidebar-3',
+		'name'          => __( 'Post single sidebar', 'vinacen' ),
+		'id'            => 'sidebar-single',
 		'description'   => __( 'Appears at the bottom of the content on posts and pages.', 'vinacen' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -156,7 +156,7 @@ add_filter( 'widget_tag_cloud_args', 'vinacen_widget_tag_cloud_args' );
 
 if(!function_exists('vinacen_enqueue_scripts')){
 	function vinacen_enqueue_scripts(){
-		wp_enqueue_style( 'bootstrap-3', get_template_directory_uri().'/assets/inc/bootstrap-3/css/bootstrap.min.css' );
+		// wp_enqueue_style( 'bootstrap-3', get_template_directory_uri().'/assets/inc/bootstrap-3/css/bootstrap.min.css' );
 		wp_enqueue_script('bootstrap-3', get_template_directory_uri().'/assets/inc/bootstrap-3/js/bootstrap.min.js', array('jquery'), '3.3', false);
 		wp_enqueue_style( 'fontawesome-4', get_template_directory_uri().'/assets/inc/font-awesome/css/font-awesome.min.css', '4.7' );
 
@@ -170,11 +170,18 @@ if(!function_exists('vinacen_enqueue_scripts')){
 		wp_enqueue_style( 'vinacen', get_template_directory_uri().'/assets/css/vinacen.css', '1.0' );
 
 		wp_enqueue_script('form-filter', get_template_directory_uri().'/assets/js/filter.js', array('jquery'), '1.0', true);
+		wp_enqueue_script('device-main', get_template_directory_uri().'/assets/js/device.js', array('jquery'), '1.0', true);
 		wp_enqueue_script('vinacen-main', get_template_directory_uri().'/assets/js/main.js', array('jquery'), '1.0', true);
 	}
 	add_action('wp_enqueue_scripts', 'vinacen_enqueue_scripts');
 }
 
-require(get_template_directory().'/funcs/funcs.php');
-require(get_template_directory().'/funcs/string_languages.php');
-require(get_template_directory().'/funcs/options.php');
+require_once(get_template_directory().'/funcs/funcs.php');
+require_once(get_template_directory().'/funcs/string_languages.php');
+require_once(get_template_directory().'/funcs/options.php');
+
+require_once(get_template_directory().'/funcs/post-type-member.php');
+require_once(get_template_directory().'/funcs/post-type-brand.php');
+
+// Components
+require_once(get_template_directory().'/components/our-notice-board.php');
