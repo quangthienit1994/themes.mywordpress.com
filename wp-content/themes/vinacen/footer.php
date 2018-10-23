@@ -48,7 +48,10 @@
 					<div  id="ct_simple_gallery-2" class="widget-1 widget-first ct_simple_gallery widget widget-postfooter">
 						<!--simple gallery start-->
 						<ul class="list-unstyled list-inline ct-u-marginBoth0">
-							<!--simple gallery items start--><li><img src="http://farmfresh.themeplayers.net/wp-content/uploads/2015/10/cart1.jpg" alt="gallery item"></li><!--simple galery item end--><li><img src="http://farmfresh.themeplayers.net/wp-content/uploads/2015/10/cart2.jpg" alt="gallery item"></li><!--simple galery item end--><li><img src="http://farmfresh.themeplayers.net/wp-content/uploads/2015/10/cart3.jpg" alt="gallery item"></li><!--simple galery item end--><li><img src="http://farmfresh.themeplayers.net/wp-content/uploads/2015/10/cart4.jpg" alt="gallery item"></li><!--simple galery item end--><!--simple gallery items end-->
+							<li><img src="http://farmfresh.themeplayers.net/wp-content/uploads/2015/10/cart1.jpg" alt="gallery item"></li>
+							<li><img src="http://farmfresh.themeplayers.net/wp-content/uploads/2015/10/cart2.jpg" alt="gallery item"></li>
+							<li><img src="http://farmfresh.themeplayers.net/wp-content/uploads/2015/10/cart3.jpg" alt="gallery item"></li>
+							<li><img src="http://farmfresh.themeplayers.net/wp-content/uploads/2015/10/cart4.jpg" alt="gallery item"></li>
 						</ul>
 						<!--simple gallery end-->
 					</div>                    </div>

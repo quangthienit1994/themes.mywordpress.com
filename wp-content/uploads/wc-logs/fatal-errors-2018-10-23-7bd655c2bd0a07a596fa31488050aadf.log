@@ -1,0 +1,41 @@
+2018-10-23T07:48:40+00:00 CRITICAL Uncaught Error: Call to undefined function the_fields() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\page\portfolio.php:44
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#3 {main}
+  thrown
+
+2018-10-23T07:49:50+00:00 CRITICAL Uncaught Error: Call to undefined function the_fields() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\page\portfolio.php:44
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#3 {main}
+  thrown
+
+2018-10-23T07:49:55+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function the_field(), 0 passed in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\page\portfolio.php on line 44 and at least 1 expected in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\plugins\advanced-custom-fields-pro\api\api-template.php:110
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\page\portfolio.php(44): the_field()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#3 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#4 {main}
+  thrown
+
+2018-10-23T08:14:16+00:00 CRITICAL Uncaught Error: Call to undefined function the_fields() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\page\portfolio.php:91
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#3 {main}
+  thrown
+
+2018-10-23T08:31:16+00:00 CRITICAL Uncaught Error: Call to undefined function get_repeater_field() in C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-content\themes\vinacen\page\portfolio.php:96
+Stack trace:
+#0 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-includes\template-loader.php(74): include()
+#1 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\wp-blog-header.php(19): require_once('C:\\Program File...')
+#2 C:\Program Files (x86)\Ampps\www\themes.mywordpress.com\index.php(17): require('C:\\Program File...')
+#3 {main}
+  thrown
+

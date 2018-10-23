@@ -179,9 +179,12 @@ if(!function_exists('vinacen_enqueue_scripts')){
 require_once(get_template_directory().'/funcs/funcs.php');
 require_once(get_template_directory().'/funcs/string_languages.php');
 require_once(get_template_directory().'/funcs/options.php');
+require_once(get_template_directory().'/funcs/portfolio.php');
 
 require_once(get_template_directory().'/funcs/post-type-member.php');
 require_once(get_template_directory().'/funcs/post-type-brand.php');
+require_once(get_template_directory().'/funcs/post-type-featured-weeks.php');
+require_once(get_template_directory().'/funcs/post-type-slides-at-home.php');
 
 // Components
 require_once(get_template_directory().'/components/our-notice-board.php');
