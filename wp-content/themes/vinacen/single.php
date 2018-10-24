@@ -78,7 +78,6 @@
 												$previous_post = get_previous_post( );
 												if($previous_post){
 											?>
-											?>
 											<li>
 												<div class="ct-singlePost-pagination-inner ">
 													<div class="ct-ct-singlePost-pagination-arrowLeft">

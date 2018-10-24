@@ -11,6 +11,9 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+		<div class="ct-preloader">
+	        <div class="ct-preloader-content"></div>
+	    </div>
 		<div id="ct-js-wrapper">
 			<header class="ct-mainHeader">
 				<div class="ct-topBar topBar--type1 ct-js-headroom animatedDif headroom--top">

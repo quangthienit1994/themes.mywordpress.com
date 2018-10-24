@@ -166,6 +166,7 @@ if(!function_exists('vinacen_enqueue_scripts')){
 		wp_enqueue_style( 'style-2', get_template_directory_uri().'/assets/css/style2.css', '1.0' );
 		wp_enqueue_style( 'style-3', get_template_directory_uri().'/assets/css/style3.css', '1.0' );
 		wp_enqueue_style( 'style-4', get_template_directory_uri().'/assets/css/style4.css', '1.0' );
+		wp_enqueue_style( 'animate', get_template_directory_uri().'/assets/css/animate.css', '1.0' );
 		
 		wp_enqueue_style( 'vinacen', get_template_directory_uri().'/assets/css/vinacen.css', '1.0' );
 
